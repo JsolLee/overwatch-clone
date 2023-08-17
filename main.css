@@ -1,0 +1,178 @@
+/* 원칙적으로는 전체 화면에 대한 것이기 때문에 body에 넣는다.*/
+body{
+    /* vh(Viewport Height) : 뷰포트의 높이를 의미한다 */
+    height: 100vh;
+    background-image: url("images/bg.jpg");
+    /* cover : 지정한 요소를 다 덮도록 배경이미지를 확대/축소 */
+    background-size: cover;
+    background-repeat : no-repeat;
+    /* 배경 이미지는 고정시키기 */
+    background-attachment: fixed;       
+}
+
+.container{
+    padding: 50px 0;
+}
+/* Hero */
+.container .heroes{
+    display: flex;
+    /* display가 flex일때 사용 가능한 -> container에서 사용 가능한 속성
+    flex-wrap : 화면 크기에 따라 크기 유지가 되면서 자동 줄바꿈
+    justify-content : 가로 축을 기준으로 좌우에 대한 정렬을 관장
+                      center :  요소들을 컨테이너의 중앙으로 정렬
+    */
+    flex-wrap: wrap;
+    justify-content : center;
+    /* 최대 크기 고정 시키기 위한 폭 조정 width와 차이점 있음 */
+    max-width: 700px;
+    /*여백 margin, padding : [top, bottom] [left, right]  auto로 하면 자동으로*/
+    margin : 0 auto;
+    padding: 40px 20px;
+    /* 크기 확인용 background-color: aquamarine; */
+}
+
+.container .heroes .hero{
+    width: 80px;
+    height: 84px;
+    margin : 4px; 
+    /* border : 두께, 종류, 색상#RGB */
+    border : 3px solid #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* overflow : hidden 흘러 넘치는이미지는 잘라버리겠다. */
+    overflow: hidden;
+    background-color: #555;
+    /* X축으로 기울이겠다. */
+    transform: skewX(-14deg);
+    transition : transform .3s, background-color .6s;
+    
+}
+.container .heroes .hero:hover{
+    /* skewX를 넣어줘야 기울임 상태를 유지되면서 확대가 된다. */
+    transform: skewX(-14deg) scale(1.3);
+    background-color: #ff9c00;
+    z-index: 1;
+}
+
+.container .heroes .hero .image{
+    /* 이미지에 넣을 공통 속성이기 떄문에 여기에다가 넣는다. */
+    /* 부모가 가지고 있는 크기를  100% 다 활용하겠다. */
+    width: 140%;
+    height: 100%;
+    /* 박스를 기울여 뒀기 때문에 다시 돌려줘야 한다. skewX(14deg) 
+        강제로 사진을 이동시켜줘야한다. 이동시킬때 사용translateX(-16px)
+    */
+    transform: translateX(-16px) skewX(14deg);
+    /* 이미지 가운데 정렬 */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 이미지 사이즈  */
+    background-size: 90px;
+}
+
+.container .heroes .hero:nth-child(1) .image{
+    background-image: url("images/hero1.png");
+}
+.container .heroes .hero:nth-child(2) .image{
+    background-image: url("images/hero2.png");
+}
+.container .heroes .hero:nth-child(3) .image{
+    background-image: url("images/hero3.png");
+}
+.container .heroes .hero:nth-child(4) .image{
+    background-image: url("images/hero4.png");
+}
+.container .heroes .hero:nth-child(5) .image{
+    background-image: url("images/hero5.png");
+}
+.container .heroes .hero:nth-child(6) .image{
+    background-image: url("images/hero6.png");
+}
+.container .heroes .hero:nth-child(7) .image{
+    background-image: url("images/hero7.png");
+}
+.container .heroes .hero:nth-child(8) .image{
+    background-image: url("images/hero8.png");
+}
+.container .heroes .hero:nth-child(9) .image{
+    background-image: url("images/hero9.png");
+}
+.container .heroes .hero:nth-child(10) .image{
+    background-image: url("images/hero10.png");
+}
+.container .heroes .hero:nth-child(11) .image{
+    background-image: url("images/hero11.png");
+}
+.container .heroes .hero:nth-child(12) .image{
+    background-image: url("images/hero12.png");
+}
+.container .heroes .hero:nth-child(13) .image{
+    background-image: url("images/hero13.png");
+}
+.container .heroes .hero:nth-child(14) .image{
+    background-image: url("images/hero14.png");
+}
+.container .heroes .hero:nth-child(15) .image{
+    background-image: url("images/hero15.png");
+}
+.container .heroes .hero:nth-child(16) .image{
+    background-image: url("images/hero16.png");
+}
+.container .heroes .hero:nth-child(17) .image{
+    background-image: url("images/hero17.png");
+}
+.container .heroes .hero:nth-child(18) .image{
+    background-image: url("images/hero18.png");
+}
+.container .heroes .hero:nth-child(19) .image{
+    background-image: url("images/hero19.png");
+}
+.container .heroes .hero:nth-child(20) .image{
+    background-image: url("images/hero20.png");
+}
+.container .heroes .hero:nth-child(21) .image{
+    background-image: url("images/hero21.png");
+}
+.container .heroes .hero:nth-child(22) .image{
+    background-image: url("images/hero22.png");
+}
+.container .heroes .hero:nth-child(23) .image{
+    background-image: url("images/hero23.png");
+}
+.container .heroes .hero:nth-child(24) .image{
+    background-image: url("images/hero24.png");
+}
+.container .heroes .hero:nth-child(25) .image{
+    background-image: url("images/hero25.png");
+}
+.container .heroes .hero:nth-child(26) .image{
+    background-image: url("images/hero26.png");
+}
+.container .heroes .hero:nth-child(27) .image{
+    background-image: url("images/hero27.png");
+}
+.container .heroes .hero:nth-child(28) .image{
+    background-image: url("images/hero28.png");
+}
+.container .heroes .hero:nth-child(29) .image{
+    background-image: url("images/hero29.png");
+}
+.container .heroes .hero:nth-child(30) .image{
+    background-image: url("images/hero30.png");
+}
+.container .heroes .hero:nth-child(31) .image{
+    background-image: url("images/hero31.png");
+}
+.container .heroes .hero:nth-child(32) .image{
+    background-image: url("images/hero32.png");
+}
+
+/* LOGO */
+.container .logo{
+    max-width: 300px;
+    margin : 0 auto;
+    padding: 0 20px;
+}
+.container .logo img{
+    width: 100%;
+}
